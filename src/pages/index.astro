@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { INITIAL_VEHICLES } from '../data/initialVehicles';
+import App from '../App';
+---
+
+<Layout
+  title="Autoval - Automotora Valparaíso y Viña del Mar"
+  description="Autoval: Venta de vehículos usados, seminuevos y multimarca en Valparaíso y Viña del Mar. Catálogo de stock, tasación online en 15 minutos, crédito automotriz y consignación."
+>
+  <div id="astro-root">
+    {/* High-Performance Astro Island Mounting */}
+    <App client:load />
+  </div>
+</Layout>

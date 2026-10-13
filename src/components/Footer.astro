@@ -1,0 +1,112 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer id="contacto" class="bg-slate-950 text-white border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+      
+      {/* Brand & Bio */}
+      <div class="lg:col-span-4 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-red-600 text-white font-black text-xl shadow-lg shadow-red-600/30">
+            AV
+          </div>
+          <div>
+            <span class="text-2xl font-black tracking-wider text-white">AUTO<span class="text-red-500">VAL</span></span>
+            <p class="text-[11px] text-slate-400 font-medium">Automotora · Valparaíso y Viña del Mar</p>
+          </div>
+        </div>
+
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+          Empresa automotriz con más de 12 años de sólida trayectoria en la V Región de Chile. Especialistas en venta de vehículos nuevos, seminuevos seleccionados, compra inmediata, consignación y financiamiento multimarca.
+        </p>
+
+        <div class="flex items-center gap-2 pt-1 text-xs text-emerald-400">
+          <span>🛡️</span>
+          <span>Garantía mecánica y revisión técnica de 140 puntos</span>
+        </div>
+      </div>
+
+      {/* Quick Links */}
+      <div class="lg:col-span-2 space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-white">Navegación</h4>
+        <ul class="space-y-2 text-xs text-slate-400">
+          <li><a href="#stock" class="hover:text-red-400 transition-colors">Stock de Vehículos</a></li>
+          <li><a href="#financiamiento" class="hover:text-red-400 transition-colors">Simulador de Crédito</a></li>
+          <li><a href="#tasacion" class="hover:text-red-400 transition-colors">Tasa tu Auto Online</a></li>
+          <li><a href="#consignacion" class="hover:text-red-400 transition-colors">Vende en Consignación</a></li>
+          <li><a href="#servicio" class="hover:text-red-400 transition-colors">Autoval Service</a></li>
+          <li><a href="/api/download-zip" download="autoval-clon-astro.zip" class="text-indigo-400 hover:text-indigo-300 font-semibold">Descargar ZIP (GitHub)</a></li>
+        </ul>
+      </div>
+
+      {/* Brands Available */}
+      <div class="lg:col-span-3 space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-white">Marcas Destacadas</h4>
+        <div class="grid grid-cols-2 gap-2 text-xs text-slate-400">
+          <span>Peugeot</span>
+          <span>Nissan</span>
+          <span>Kia</span>
+          <span>Mitsubishi</span>
+          <span>Chery</span>
+          <span>Toyota</span>
+          <span>Hyundai</span>
+          <span>Suzuki</span>
+        </div>
+      </div>
+
+      {/* Contact Details */}
+      <div class="lg:col-span-3 space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-white">Contacto & Sucursal</h4>
+        <div class="space-y-2.5 text-xs text-slate-300">
+          <div class="flex items-start gap-2.5">
+            <span class="text-red-500 mt-0.5">📍</span>
+            <span>Showroom Valparaíso & Viña del Mar, Región de Valparaíso, Chile</span>
+          </div>
+
+          <div class="flex items-center gap-2.5">
+            <span class="text-red-500">🕒</span>
+            <span>Lunes a Viernes: 10:00 a 17:00 hrs</span>
+          </div>
+
+          <div class="flex items-center gap-2.5">
+            <span class="text-red-500">📞</span>
+            <a href="tel:+5698253776" class="hover:text-white font-semibold">
+              (+56) 9 8253 776
+            </a>
+          </div>
+
+          <div class="flex items-center gap-2.5">
+            <span class="text-red-500">✉️</span>
+            <a href="mailto:ventas@autoval.cl" class="hover:text-white">
+              ventas@autoval.cl
+            </a>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a
+            href="https://wa.me/5698253776?text=Hola%20Autoval,%20quisiera%20consultar%20por%20los%20veh%C3%ADculos%20en%20venta."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-all"
+          >
+            <span>Chatear con Ejecutivo (+56 9 8253 776)</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    {/* Bottom Credits */}
+    <div class="pt-8 mt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div>
+        © {currentYear} Autoval Automotora (autoval2.cl). Todos los derechos reservados.
+      </div>
+      <div>
+        Construido 100% con Astro JS + React Islands + PostgreSQL
+      </div>
+    </div>
+  </div>
+</footer>

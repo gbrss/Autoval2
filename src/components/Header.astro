@@ -1,0 +1,106 @@
+---
+interface Props {
+  stockCount?: number;
+}
+
+const { stockCount = 10 } = Astro.props;
+---
+
+<header class="sticky top-0 z-40 w-full bg-slate-950 text-white shadow-xl border-b border-slate-800">
+  {/* Top Bar with Chilean contact info */}
+  <div class="bg-slate-900 border-b border-slate-800/80 text-xs text-slate-300 py-1.5 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+        <div class="flex items-center gap-1.5">
+          <span class="text-red-500">📍</span>
+          <span>Valparaíso y Viña del Mar, V Región</span>
+        </div>
+        <div class="flex items-center gap-1.5 hidden md:flex">
+          <span class="text-red-500">🕒</span>
+          <span>Lun a Vie: 10:00 a 17:00 hrs</span>
+        </div>
+        <div class="flex items-center gap-1.5 hidden lg:flex">
+          <span class="text-red-500">✉️</span>
+          <a href="mailto:ventas@autoval.cl" class="hover:text-red-400 transition-colors">
+            ventas@autoval.cl
+          </a>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 ml-auto">
+        <a
+          href="tel:+5698253776"
+          class="flex items-center gap-1 font-medium text-slate-200 hover:text-white transition-colors"
+        >
+          <span class="text-red-500">📞</span>
+          <span>(+56) 9 8253 776</span>
+        </a>
+
+        <a
+          href="https://wa.me/5698253776?text=Hola%20Autoval,%20me%20gustar%C3%ADa%20consultar%20por%20un%20veh%C3%ADculo."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
+        >
+          <span>💬</span>
+          <span class="hidden sm:inline">WhatsApp Ventas</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {/* Main Navbar */}
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+    <a href="#inicio" class="flex items-center gap-3 group text-left cursor-pointer">
+      <div class="relative flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-red-600 to-red-800 text-white font-black text-xl shadow-lg shadow-red-600/30 group-hover:scale-105 transition-transform">
+        <span>AV</span>
+        <div class="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-emerald-500 rounded-full border-2 border-slate-950" title="En línea"></div>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-1.5">
+          <span class="text-2xl font-black tracking-wider text-white">AUTO<span class="text-red-500">VAL</span></span>
+          <span class="text-[10px] font-semibold bg-red-600/20 text-red-400 border border-red-500/30 px-1.5 py-0.5 rounded">12+ Años</span>
+        </div>
+        <p class="text-[11px] font-medium text-slate-400 tracking-tight">
+          Automotora · Valparaíso y Viña del Mar
+        </p>
+      </div>
+    </a>
+
+    <nav class="hidden xl:flex items-center gap-1 text-sm font-medium">
+      <a href="#stock" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all flex items-center gap-1.5">
+        <span>Vehículos en Stock</span>
+        <span class="text-xs px-1.5 py-0.2 rounded-full bg-slate-800 text-slate-300 border border-slate-700">{stockCount}</span>
+      </a>
+      <a href="#financiamiento" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">
+        Financiamiento
+      </a>
+      <a href="#tasacion" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">
+        Tasación Online
+      </a>
+      <a href="#consignacion" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">
+        Vende tu Auto
+      </a>
+      <a href="#servicio" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">
+        Autoval Service
+      </a>
+      <a href="#contacto" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">
+        Contacto
+      </a>
+    </nav>
+
+    <div class="flex items-center gap-2 sm:gap-3">
+      <a
+        href="/api/download-zip"
+        download="autoval-clon-astro.zip"
+        class="flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700/80 text-xs sm:text-sm font-medium transition-all shadow-sm hover:border-slate-500 cursor-pointer"
+        title="Descargar código completo del proyecto en ZIP para subir a GitHub"
+      >
+        <span class="text-blue-400">⬇️</span>
+        <span class="hidden md:inline">Descargar ZIP</span>
+        <span class="bg-blue-500/20 text-blue-300 text-[10px] px-1.5 py-0.5 rounded border border-blue-500/30">GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>

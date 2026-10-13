@@ -4,24 +4,27 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tsx server.ts",
-    "build": "vite build",
-    "start": "tsx server.ts",
-    "preview": "vite preview",
-    "clean": "rm -rf dist server.js",
+    "dev": "astro dev --port 3000 --host 0.0.0.0",
+    "build": "astro build",
+    "start": "node ./dist/server/entry.mjs",
+    "preview": "astro preview --port 3000 --host 0.0.0.0",
+    "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
+    "@astrojs/node": "^11.1.7",
+    "@astrojs/react": "^7.0.1",
     "@google/genai": "^2.4.0",
     "@tailwindcss/vite": "^4.3.3",
     "@vitejs/plugin-react": "^6.1.1",
+    "astro": "^7.3.8",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
     "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
     "react": "^19.0.1",
     "react-dom": "^19.0.1",
-    "vite": "^8.3.0",
-    "express": "^4.21.2",
-    "dotenv": "^17.2.3",
-    "motion": "^12.23.24"
+    "vite": "^8.3.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
