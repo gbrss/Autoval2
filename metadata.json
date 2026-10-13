@@ -1,0 +1,6 @@
+{
+  "name": "Autoval - Automotora Valparaíso",
+  "description": "Autoval: Venta de vehículos usados, seminuevos y multimarca en Valparaíso y Viña del Mar. Gestión de stock, tasación online, financiamiento y consignación.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
